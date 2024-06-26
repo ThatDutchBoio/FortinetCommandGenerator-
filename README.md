@@ -18,7 +18,8 @@ https://enter.fortigate.ip.here/api/v2/monitor/user/fortitoken?vdom=root
 
 ## Running:
 
-Simply have node.js installed, and type "node ." while in the project directory to run.
+Clone the repository "git clone ThatDutchBoio/FortinetCommandGenerator-"
+Have node.js installed, navigate into the cloned repository and type "node ."
 It will prompt you for a command to run on each user profile.
-Default is "set username-sensitivity disable"
+Default is "set username-sensitivity disable", just press enter to use it.
 
