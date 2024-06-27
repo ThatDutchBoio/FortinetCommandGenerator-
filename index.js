@@ -15,13 +15,27 @@
             @command: string (Command to be run on user, Default: "set username-sensitivity disable")
         `)
     prompt.start()
+    process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0"
+    let {key} = await prompt.get(["key"])
+
+    const headers = {
+        "Authorization": `Bearer ${key}`,
+        "Accept": "application/json"
+    }
+    let fRes = await fetch("https://82.198.145.36/api/v2/monitor/user/fortitoken?vdom=root", {
+        method: "GET",
+        headers: headers
+
+    })
+
+    let body = await fRes.json()
 
     let {command} = await prompt.get(["command"])
     // If no argument specified, set to default.
     command = (command)? command :  "set username-sensitivity disable"
     
     let res = ``
-    for (i in Users.results){
+    for (i in body.results){
         if (Users.results[i].user) {
             res += `
             config user local
