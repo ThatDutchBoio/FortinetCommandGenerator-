@@ -1,6 +1,7 @@
 (async function (){
     const prompt = require("prompt-async")
-    const Users = require("./UsersJson.json")
+    //const Users = require("./UsersJson.json")
+    const fs = require('fs');
     
     console.log(`
         // Tom's awesome fortigate command thingy script thingy!!! \\
@@ -36,16 +37,17 @@
     
     let res = ``
     for (i in body.results){
-        if (Users.results[i].user) {
+        if (body.results[i].user) {
             res += `
             config user local
-            edit ${Users.results[i].user}
+            edit ${body.results[i].user}
             ${command}
             end
             `
         }
     }
     
-    console.log(res) 
+    //console.log(res) 
+    fs.writeFileSync('output.txt', res, 'utf8');
 
 })()
