@@ -22,7 +22,7 @@
         "Authorization": `Bearer ${key}`,
         "Accept": "application/json"
     }
-    let fRes = await fetch("https://82.198.145.36/api/v2/monitor/user/fortitoken?vdom=root", {
+    let fRes = await fetch("https://IPhere/api/v2/monitor/user/fortitoken?vdom=root", {
         method: "GET",
         headers: headers
 
