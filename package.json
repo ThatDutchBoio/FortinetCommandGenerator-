@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ip": "^2.0.1",
     "prompt-async": "^0.9.9"
   }
 }
