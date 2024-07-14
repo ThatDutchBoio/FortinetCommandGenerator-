@@ -4,7 +4,7 @@
 ### Requirement:
 You need an API key to use this.
 To get an API key, navigate to System -> Administrators
-and create a new REST API admin
+and create a new REST API admin or regenerate the API key for an existing REST API admin.
 
 Clone the repository "git clone ThatDutchBoio/FortinetCommandGenerator-"
 Have node.js installed, navigate into the cloned repository and type "node ."
